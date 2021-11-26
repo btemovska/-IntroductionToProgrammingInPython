@@ -29,22 +29,31 @@ password = password + '!'
 print(password)
 
 # LAB 6.16
+''' Read in first equation, ax + by = c '''
 a = int(input())
 b = int(input())
 c = int(input())
 
+''' Read in second equation, dx + ey = f '''
 d = int(input())
 e = int(input())
 f = int(input())
 
+check = False
+
 for x in range(-10, 11):
     for y in range(-10, 11):
-        g = (a * x) + (b * y)
-        h = (d * x) + (e * y)
+        g = ((a * x) + (b * y))
+        h = ((d * x) + (e * y))
         if (g == c) and (h == f):
-            print("x = {}, y = {}".format(x, y))
+            check = True
+            x_solution = x
+            y_solution = y
+if check:
+    print("x = {} , y = {}".format(x_solution, y_solution))
 else:
     print("There is no solution")
+
 
 # LAB 6.17
 a = int(input())
