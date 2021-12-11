@@ -22,9 +22,10 @@ if __name__ == '__main__':
 def feet_to_steps(user_feet):
     one_step_in_feet = 2.5
     num_steps_walked = user_feet / one_step_in_feet
-    return num_steps_walked
+    return int(num_steps_walked)
 
 if __name__ == '__main__':
     # Type your code here
     num_feet_walked_entered = float(input())
-    print('{:.0f}'.format(feet_to_steps(num_feet_walked_entered)))
+    #print('{:.0f}'.format(feet_to_steps(num_feet_walked_entered)))
+    print(feet_to_steps(num_feet_walked_entered))
