@@ -1,7 +1,7 @@
 gas_const = 8.3144621
 
 def compute_gas_volume(pressure, temperature, moles):
-    gas_volume (moles * gas_const * temperature) / pressure
+    gas_volume = (moles * gas_const * temperature) / pressure
     return gas_volume
 
 
