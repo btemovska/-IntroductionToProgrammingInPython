@@ -78,14 +78,24 @@ elif (input_month == 'March') and (input_day >=1  and input_day <= 19):
 else:
     print('Invalid')
 
-#5.16 LAB - note need to figure out how to exclude 1900
-input_year = int(input())
-c_1 = input_year / 4
-c_2 = input_year / 400
+# #5.16 LAB - note need to figure out how to exclude 1900
+# input_year = int(input())
+# c_1 = input_year / 4
+# c_2 = input_year / 400
+#
+# if (c_1 - int(c_1) == 0) and (c_2 - int(c_2) == 0):
+#     print("{} - leap year".format(input_year))
+# elif c_1 - int(c_1) == 0:
+#     print("{} - leap year".format(input_year))
+# else:
+#     print("{} - not a leap year".format(input_year))
 
-if (c_1 - int(c_1) == 0) and (c_2 - int(c_2) == 0):
-    print("{} - leap year".format(input_year))
-elif c_1 - int(c_1) == 0:
-    print("{} - leap year".format(input_year))
+# 5.15 Lab
+is_leap_year = False
+input_year = int(input())
+''' Type your code here. '''
+x = ((input_year % 4 == 0) and (input_year % 100 != 0 or input_year % 400 == 0))
+if x == True:
+    print('{} - leap year'.format(input_year))
 else:
-    print("{} - not a leap year".format(input_year))
+    print('{} - not a leap year'.format(input_year))
