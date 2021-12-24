@@ -1,29 +1,32 @@
+user_list = input().split()
 
-x = input()
-y = input()
+old_word_list = []
+new_word_list = []
+for x, y in enumerate(user_list):
+    if x % 2 == 0:
+        old_word_list.append(y)
+    else:
+        new_word_list.append(y)
 
-x = x.split()
-print(x)
+my_dict = dict(zip(old_word_list, new_word_list))
 
+user_sentence_list = input().split()
 
-if len(x) == 8:
-    y = y.replace(x[0], x[1])
-    y = y.replace(x[2], x[3])
-    y = y.replace(x[4], x[5])
-    y = y.replace(x[6], x[7])
-    print(y)
-elif len(x) == 6:
-    y = y.replace(x[0], x[1])
-    y = y.replace(x[2], x[3])
-    y = y.replace(x[4], x[5])
-    print(y)
-elif len(x) == 4:
-    y = y.replace(x[0], x[1])
-    y = y.replace(x[2], x[3])
-    print(y)
-elif len(x) == 2:
-    y = y.replace(x[0], x[1])
-    print(y)
-else:
-    print('i don\'t know')
+for x in user_sentence_list:
+    if x in my_dict.keys():
+        replacement_word = x.replace(x, my_dict.get(x))
+        # if replacement_word
+        if replacement_word == user_sentence_list[-1]:
+            print(replacement_word, end='')
+        else:
+            print(replacement_word, end=' ')
+    else:
+        replacement_word = x
+        if replacement_word == user_sentence_list[-1]:
+            print(replacement_word, end='')
+        else:
+            print(replacement_word, end=' ')
 
+print()
+
+        
