@@ -8,3 +8,8 @@ y = 0
 for x in list_of_words:
     print('{} {}'.format(x, list_of_words.count(x)))
 
+#better
+user_words = input().split()
+
+for x in user_words:
+    print('{} {}'.format(x, user_words.count(x)))
