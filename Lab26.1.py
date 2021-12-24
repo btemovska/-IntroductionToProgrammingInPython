@@ -16,3 +16,18 @@ if len(new_list_a) <= 9:
 else:
     print('Too many inputs')
 
+
+#better
+user_list = input()
+
+my_list = user_list.split()
+my_list = list(map(int, my_list))
+
+if len(my_list) <= 9:
+    #the code goeshere
+    middle = len(my_list) // 2
+    print(my_list[middle])
+
+else:
+    print('Too many inputs')
+
