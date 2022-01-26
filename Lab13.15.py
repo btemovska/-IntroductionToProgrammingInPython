@@ -6,7 +6,7 @@ class Team:
 
     # TODO: Define get_win_percentage()
     def get_win_percentage(self):
-        return team_wins / (team_wins + team_losses)
+        return self.team_wins / (self.team_wins + self.team_losses)
 
 
 if __name__ == "__main__":
