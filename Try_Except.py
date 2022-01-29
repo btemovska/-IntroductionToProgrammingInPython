@@ -11,4 +11,3 @@ except ValueError:
     print('Invalid number')
 
 #example 2
-
