@@ -33,3 +33,37 @@ print()
 
 total = cost_first + cost_second
 print('Total: ${}'.format(total))
+
+
+
+#--better code---
+
+# Type your code here
+services = {'Oil change':35, 'Tire rotation':19, 'Car wash':7, 'Car wax':12}
+
+print('Davy\'s auto shop services')
+for x, y in services.items():
+    print('{} -- ${}'.format(x, y))
+
+first_service = input('\nSelect first service:\n')
+second_service = input('Select second service:\n')
+
+print('\nDavy\'s auto shop invoice')
+
+my_list = []
+my_list.append(first_service)
+my_list.append(second_service)
+service_num = 1
+list_two = []
+print()
+
+for x in my_list:
+    if x in services.keys():
+        print(f'Service {service_num}: {x}, ${services.get(x)}')
+        list_two.append(services.get(x))
+    else:
+        print(f'Service {service_num}: No service')
+
+    service_num +=1
+
+print(f'\nTotal: ${sum(list_two)}')
