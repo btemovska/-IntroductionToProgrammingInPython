@@ -10,6 +10,16 @@ for x in my_text:
 #print(count)
 print(len(count))
 
+#OR 23.1
+user_text = input()
+
+''' Type your code here. '''
+user_text = user_text.replace(" ", "")
+user_text = user_text.replace(".", "")
+user_text = user_text.replace(",", "")
+user_text = user_text.replace("!", "")
+print(len(user_text))
+
 
 # Lab 23.2
 # my_int = int(input())
