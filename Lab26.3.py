@@ -29,4 +29,4 @@ for x in user_sentence_list:
 
 print()
 
-        
+
