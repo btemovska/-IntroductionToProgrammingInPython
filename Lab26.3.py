@@ -30,3 +30,29 @@ for x in user_sentence_list:
 print()
 
 
+#OR
+''' Type your code here. '''
+user_words_list = input().rstrip().split()
+user_sentence_list = input().rstrip().split()
+
+old_words = []
+new_words = []
+
+for x , y in enumerate(user_words_list):
+    if x % 2 == 0:
+        old_words.append(y)
+    else:
+        new_words.append(y)
+
+my_dict = dict(zip(old_words, new_words))
+
+sentence = ''
+
+for z in user_sentence_list:
+    if z in my_dict.keys():
+        sentence = sentence + " " + my_dict.get(z)
+    else:
+        sentence = sentence + " " + z
+
+sentence = sentence.lstrip()
+print(sentence)
