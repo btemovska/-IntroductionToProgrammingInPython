@@ -84,3 +84,57 @@ if len(month_list_numb) == 2:
 if len(month_list_numb) == 1:
     print('{}/{}/{}'.format(month_list_numb[0], day_list[0], year_list[0]))
 
+#OR
+def get_month_as_int(monthString):
+
+    if monthString == 'January':
+        month_int = 1
+    elif monthString == 'February':
+        month_int = 2
+    elif monthString == 'March':
+        month_int = 3
+    elif monthString == 'April':
+        month_int = 4
+    elif monthString == 'May':
+        month_int = 5
+    elif monthString == 'June':
+        month_int = 6
+    elif monthString == 'July':
+        month_int = 7
+    elif monthString == 'August':
+        month_int = 8
+    elif monthString == 'September':
+        month_int = 9
+    elif monthString == 'October':
+        month_int = 10
+    elif monthString == 'November':
+        month_int = 11
+    elif monthString == 'December':
+        month_int = 12
+    else:
+        month_int = 0
+
+    return month_int
+
+
+user_string = input()
+
+list1 = []
+list2 = []
+
+while user_string != '-1':
+    list1.append(user_string)
+    user_string = input()
+
+for x in list1:
+    if x.__contains__(','):
+        list2.append(x)
+
+for y in list2:
+    first_space_index = y.find(' ')
+    month = y[:first_space_index]
+    comma_index = y.find(',')
+    day = y[first_space_index + 1 : comma_index]
+    year = y[-4:]
+    print(f'{get_month_as_int(month)}/{day}/{year}')
+
