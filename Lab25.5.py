@@ -20,3 +20,11 @@ if length == 3:
     print('Midfix: {}'.format(my_string))
 else:
     print('Midfix: {}'.format(word))
+
+
+#OR
+user_input = input().rstrip()
+
+middle_index = len(user_input) // 2
+
+print(f'Midfix: {user_input[middle_index - 1 : middle_index + 2]}')
