@@ -16,3 +16,23 @@ while user_string != 'q':
         print('Error: No comma in string.')
 
         user_string = input('\nEnter input string:\n')
+
+
+#OR
+user_string = input('Enter input string:\n').rstrip().replace(" ", "")
+
+while user_string != 'q':
+    if user_string.__contains__(','):
+
+        first_comma_index = user_string.find(',')
+        first_word = user_string[:first_comma_index]
+        second_word = user_string[first_comma_index + 1:]
+
+        print(f'First word: {first_word}')
+        print(f'Second word: {second_word}')
+
+        user_string = input('\nEnter input string:\n').rstrip().replace(" ", "")
+
+    else:
+        print('Error: No comma in string.')
+        user_string = input('\nEnter input string:\n').rstrip().replace(" ", "")
