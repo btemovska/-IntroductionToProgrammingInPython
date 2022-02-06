@@ -37,4 +37,4 @@ with open(file_name, 'r') as f:
             desc = x[second_tab +2 : available_index - 1]
 
             print(f'{item} ({category}) -- {desc}')
-       
+
